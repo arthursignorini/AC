@@ -1,0 +1,246 @@
+Arthur Signorini Miranda - 848122
+
+Guia_04
+
+1.a)
+
+a.)  x' . ( y'+z )'
+
+	#minterms	mintermos	x y z   x'y'z'	(y'+z)'	   x' . ( y'+z )'  
+	0		x' y' z'	0 0 0	1 1 1	   0		0		
+	1		x' y' z		0 0 1	1 1 0	   0		0
+	2		x' y z'		0 1 0	1 0 1	   1		1
+	3		x' y z		0 1 1	1 0 0	   0		0
+	4		x y' z'		1 0 0	0 1 1	   0		0
+	5		x y' z		1 0 1	0 1 0	   0		0
+	6		x y z'		1 1 0	0 0 1	   1		0
+	7		x y z		1 1 1	0 0 0	   0		0
+
+b.) ( x' +y' )' . z
+
+	#minterms	mintermos	x y z	x'y'z'	(x'+y')'    (x'+y')' . z
+	0		x' y' z'	0 0 0	1 1 1	   0		0
+	1		x' y' z		0 0 1	1 1 0	   0		0
+	2		x' y z'		0 1 0	1 0 1	   0		0
+	3		x' y z		0 1 1	1 0 0	   0		0
+	4		x y' z'		1 0 0	0 1 1	   0		0
+	5		x y' z		1 0 1	0 1 0      0		0
+	6		x y z'		1 1 0	0 0 1      1		0
+	7		x y z		1 1 1	0 0 0      1		1
+
+c.) ( x . y' )' . z'
+
+ 	#minterms       mintermos       x y z   x'y'z'  (x . y')'    (x . y')' . z' 
+        0               x' y' z'        0 0 0   1 1 1      1            1
+        1               x' y' z         0 0 1   1 1 0      1            0
+        2               x' y z'         0 1 0   1 0 1      1            1
+        3               x' y z          0 1 1   1 0 0      1            0
+        4               x y' z'         1 0 0   0 1 1      0            0
+        5               x y' z          1 0 1   0 1 0      0            0
+        6               x y z'          1 1 0   0 0 1      1            1
+        7               x y z           1 1 1   0 0 0      1            0
+
+d.)  ( x' . y )' . z
+
+	#minterms       mintermos       x y z   x'y'z'  (x' . y')'    (x . y')' . z'
+        0               x' y' z'        0 0 0   1 1 1      0            0
+        1               x' y' z         0 0 1   1 1 0      0            0
+        2               x' y z'         0 1 0   1 0 1      1            1
+        3               x' y z          0 1 1   1 0 0      1            0
+        4               x y' z'         1 0 0   0 1 1      1            1
+        5               x y' z          1 0 1   0 1 0      1            0
+        6               x y z'          1 1 0   0 0 1      1            1
+        7               x y z           1 1 1   0 0 0      1            0
+
+e.)  ( x' + y ) . ( y' + z)'
+
+ 	#minterms       mintermos       x y z   x'y'z'  (x' + y)    (y' + z)'	 ( x' + y ) . ( y' + z)'
+        0               x' y' z'        0 0 0   1 1 1      1            0                  0
+        1               x' y' z         0 0 1   1 1 0      1            0		   0
+        2               x' y z'          0 1 0   1 0 1      1            1		   1
+        3               x' y z          0 1 1   1 0 0      1            0		   0
+        4               x y' z'          1 0 0   0 1 1      0            0		   0
+        5               x y' z         1 0 1   0 1 0      0            0		   0
+        6               x y z'         1 1 0   0 0 1      1            1		   1
+        7               x y z           1 1 1   0 0 0      1            0		   1
+
+2.a)
+
+a.) x . (x' + y)'
+
+	Lei de Morgan = (x' + y)' = x" . y
+	x" = x
+	x . (x . y)'
+	Idenpotência = x . (x . y') = x . y'
+	Resposta = x . y'
+
+b.) (x' + y) + (x' . y)
+
+	Distributiva = x' + y;
+
+c.) (x' . y')' . (x + y)
+
+	Lei de Morgan = (x' . y')' = (x" + y") = (x + y)
+	(x + y) . (x + y)
+	Resposta = (x + y)
+
+d.) (x' . y)' + (x' + y)'
+
+	Lei de Morgan = (x + y') + (x . y')
+	Resposta = x + y' (utilizando a abasorção)
+
+e.) (y + x') . (y' + x)'
+
+	Lei de Morgan = (y + x') . (y . x')
+	Resposta = y . x'
+
+3.a)
+
+a.)
+	#x	y	z	mintermo     	SoP (1, 5, 6, 7)
+	0	0	0	x'.y'.z' = m0		0
+	0	0	1	x'.y'.z = m1		1
+	0	1	0	x'.y.z' = m2		0
+	0	1	1	x'.y.z = m3		0
+	1	0	0	x.y'.z' = m4		0
+	1	0	1	x.y'.z = m5		1
+	1	1	0	x.y.z' = m6		1
+	1	1	1	x.y.z = m7		1
+
+b.)
+
+	#x      y       z       mintermo        SoP (2, 5, 6, 7)
+        0       0       0       x'.y'.z' = m0           0
+        0       0       1       x'.y'.z = m1            0
+        0       1       0       x'.y.z' = m2            1
+        0       1       1       x'.y.z = m3             0
+        1       0       0       x.y'.z' = m4            0
+        1       0       1       x.y'.z = m5             1
+        1       1       0       x.y.z' = m6             1
+        1       1       1       x.y.z = m7              1	 
+
+c.)
+
+#x	y	w	z	Mintermo	Expressão Mintermo	SoP (1, 2, 3, 6, 7, 11, 15)
+0	0	0	0	m0		    x'.y'.w'.z'				0
+0	0	0	1	m1		    x'.y'.w'.z				1
+0	0	1	0	m2		    x'.y'.w.z'				1
+0	0	1	1	m3		    x'.y'.w.z				1
+0	1	0	0	m4		    x'.y.w'.z'				0	
+0	1	0	1	m5		    x'.y.w'.z				0
+0	1	1	0	m6		    x'.y.w.z'				1
+0	1	1	1	m7		    x'.y.w.z				1
+1	0	0	0	m8		    x.y'.w'.z'				0
+1	0	0	1	m9		    x.y'.w'.z				0
+1	0	1	0	m10		    x.y'.w.z'				0
+1	0	1	1	m11		    x.y'.w.z				1
+1	1	0	0	m12		    x.y.w'.z'				0
+1	1	0	1	m13		    x.y.w'.z				0	
+1	1	1	0	m14		    x.y.w.z'				0	
+1	1	1	1	m15		    x.y.w.z				1
+
+d.)
+
+#x      y       w       z       Mintermo        Expressão Mintermo      SoP (1, 2, 6, 8, 10, 12, 14)
+0       0       0       0       m0                  x'.y'.w'.z'                         0
+0       0       0       1       m1                  x'.y'.w'.z                          1
+0       0       1       0       m2                  x'.y'.w.z'                          1
+0       0       1       1       m3                  x'.y'.w.z                           0
+0       1       0       0       m4                  x'.y.w'.z'                          0
+0       1       0       1       m5                  x'.y.w'.z                           0
+0       1       1       0       m6                  x'.y.w.z'                           1
+0       1       1       1       m7                  x'.y.w.z                            0
+1       0       0       0       m8                  x.y'.w'.z'                          1
+1       0       0       1       m9                  x.y'.w'.z                           0
+1       0       1       0       m10                 x.y'.w.z'                           1
+1       0       1       1       m11                 x.y'.w.z                            0
+1       1       0       0       m12                 x.y.w'.z'                           1
+1       1       0       1       m13                 x.y.w'.z                            0
+1       1       1       0       m14                 x.y.w.z'                            1
+1       1       1       1       m15                 x.y.w.z                             0
+
+e.)
+
+#x      y       w       z       Mintermo        Expressão Mintermo      SoP (0, 2, 5, 7, 8, 11)
+0       0       0       0	m0                  x'.y'.w'.z'                    1
+0       0       0       1       m1                  x'.y'.w'.z                     0
+0       0       1       0       m2                  x'.y'.w.z'                     1
+0       0       1       1       m3                  x'.y'.w.z                      0
+0       1       0       0       m4                  x'.y.w'.z'                     0
+0       1       0       1       m5                  x'.y.w'.z                      1
+0       1       1       0       m6                  x'.y.w.z'                      0
+0       1       1       1       m7                  x'.y.w.z                       1
+1       0       0       0       m8                  x.y'.w'.z'                     1
+1       0       0       1       m9                  x.y'.w'.z                      0
+1       0       1       0       m10                 x.y'.w.z'                      0
+1       0       1       1       m11                 x.y'.w.z                       1
+1       1       0       0       m12                 x.y.w'.z'                      0
+1       1       0       1       m13                 x.y.w'.z                       0
+1       1       1       0       m14                 x.y.w.z'                       0
+1       1       1       1       m15                 x.y.w.z                        0
+
+
+4.a)
+
+a.)
+
+Maxtermos = m1, m2, m6, m7
+
+Expressão completa = (x'+y'+z) . (x'+y+z') . (x+y'+z') . (x+y'+z)
+
+b.)
+
+Maxtermos = m0, m3, m4, m7
+
+Expressão completa = (x'+y'+z') . (x'+y+z) . (x+y'+z') . (x+y+z)
+
+c.)
+
+Maxtermos = m0, m1, m2, m4, m6, m8, m11, m12
+
+Expressão completa = (x'+y'+w'+z') . (x'+y'+w'+z) . (x'+y'+w+z') . (x'+y+w'+z') . (x'+y+w+z') . (x+y'+w'+z') . (x+y'+w'+z') . (x+y'+w+z) . (x+y+w'+z') 
+
+d.)
+
+Maxtermos = m1, m2, m4, m7, m8, m9, m15)
+
+Expressão completa = (x'+y'+w'+z) . (x'+y'+w+z') . (x'+y+w'+z') . (x'+y+w+z) . (x+y'+w'+z') . (x+y'+w'+z') . (x+y'+w'+z) . (x+y+w+z)
+
+e.)
+
+Maxtermos = m0, m1, m2, m4, m5, m10, m13
+
+Expressão completa = (x'+y'+w'+z') . (x'+y'+w'+z) . (x'+y'+w+z') . (x+y'+z') . (x'+y+w'+z) . (x+y'+w+z'). (x+y+w'+z)
+
+
+5.a) SoP = quando o resultado por 1 - mintermos e PoS = quando o resultado for 0 - maxtermos
+
+a.)
+
+SoP: x . y'
+
+PoS: (x+y) . (x+y') . (x'+y')
+
+b.)
+
+SoP: x'.y + x.y
+
+PoS: (x+y) . (x'+y)
+
+c.)
+
+SoP: x'.y'.z' + x'.y.z + x.y'+z' + x.y'.z + x.y.z
+
+PoS: (x'+y'+z) . (x'+y+z') . (x+y+z')
+
+d.)
+
+SoP: x'.y'.z' + x'.y'.z + x'.y.z' + x.y'.z' + x.y'.z + x.y.z'
+
+PoS: (x'+y+z) . (x+y+z)
+
+e.)
+
+SoP: x'.y'.w'.z' + x'.y'.w'.z + x'.y'.w.z + x'.y.w'.z + x'.y.w.z' + x.y'.w'.z' + x.y'.w'.z + x.y'.w.z' + x.y.w'.z' + x.y.w.z' + x.y.w.z
+
+PoS: (x' + y' + w + z) · (x' + y + w + z) · (x + y + w' + z) · (x + y + w + z) · (x + y + w + z')

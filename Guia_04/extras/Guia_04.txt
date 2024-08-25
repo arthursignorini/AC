@@ -1,0 +1,28 @@
+Arthur Signorini Miranda - 848122
+
+EXTRAS 
+
+6)
+
+Expanda a expressão usando a propriedade distributiva:
+S1 = ( ~X | Y | ~Z ) & ( X | ~Y | ~Z)
+
+Aplicando a distributiva:
+S1 = (~X | Y | ~Z) & (X | ~Y | ~Z)
+
+Expanda as combinações possíveis:
+S1 = (~X & X) | (~X & ~Y) | (~X & ~Z) | (Y & X) | (Y & ~Y) | (Y & ~Z) | (~Z & X) | (~Z & ~Y) | (~Z & ~Z)
+
+A expressão SoP simplificada para essa expressão em Verilog será:
+S1 = (X & ~Y & ~Z) | (~X & ~Z)
+
+7)
+
+A expressão é dada em forma de SoP:
+s1 = ( ~x & ~y & z ) | ( x & y & ~z )
+
+Converta para a forma PoS usando a propriedade distributiva e leis de De Morgan:
+Primeiro, inverta a expressão e aplique De Morgan: s1 = ( ~x + x) & (~y + y) & (z + ~z)
+
+A expressão PoS simplificada para essa expressão em Verilog será:
+s1 = (x + ~y + z) & (~x + y + ~z)
