@@ -1,0 +1,75 @@
+// Arthur Signorini Miranda - 848122
+
+Preparacao_01
+
+1.)
+
+a.) a'b'c'd' + a'bc'd' + a'bcd + ab'cd + abc'd'
+b.) (A+B+C+D).(A+B+C+D').(A+B+C'+D').(A+B'+C+D').(A+B'+C'+D).(A'+B+C+D).(A'+B+C+D').(A'+B+C'+D).(A'+B'+C+D').(A'+B'+C'+D).(A'+B'+C'+D')
+c.)
+
+ ab / cd 00 01 11 10
+ 00      0  0  0  1
+ 01      1  0  1  0
+ 11      1  0  0  0
+ 10      0  0  1  0
+
+Simplificação de mintermos = d'(bc' + a'b'c) + cd (a'b + ab')
+
+d.)
+
+ ab / cd 00 01 11 10
+ 00      0  0  0  1
+ 01      1  0  1  0
+ 11      1  0  0  0
+ 10      0  0  1  0
+
+Simplificação dos maxtermos = A[B' + C'(A' + B' + D') + D(A' + B')] + (A' + B')B'CD'
+
+e.) ((d NAND d) NAND ((b NAND (c NAND c)) NAND ((a NAND a) NAND (b NAND b) NAND c))) NAND ((c NAND d) NAND (((a NAND a) NAND b) NAND (a NAND (b NAND b))))
+
+f.) A[B' + C'(A' + B' + D') + D(A' + B')] + (A' + B')B'CD'
+
+2.) 
+
+ X Y 	X' 	Y' 	X'.Y	X+Y'	(X+Y')' 	((X+Y')' + (X'.Y))
+ 0 0 	1  	1  	0	1	0			0
+ 0 1 	1  	0	1	0	1			1
+ 1 0 	0  	1	0	1	0			0
+ 1 1 	0  	0	0	1	0			0
+
+3.)
+
+ A  B  C  	S
+ 0  0  0        1
+ 0  0  1        0
+ 0  1  0        1
+ 0  1  1        1
+ 1  0  0        1
+ 1  0  1        1
+ 1  1  0        0
+ 1  1  1        1
+
+
+4.)
+
+ 2310(4) = 10110100(2)
+ Inverte = 01001011
+ +1 = 01001100
+ 56(8) = 101110(2)
+ 
+  01001100
++ 00101110
+------------
+  01111010
+
+
+
+5.) 
+ A B	A'	B'	A'+B'	(A'+B')' A'B	AB'	A'B + AB'	(A'B + AB') + (A'+B')	(A'B + AB') + (A'+B')'
+ 0 0	1	1	1	0	  0     0	0		0			1
+ 0 1	1	0	1	0	  1	0	1		1			0
+ 1 0	0	1	1	0	  0	1	1		1			0
+ 1 1	0	0	0	1	  0	0	0		1			0
+
+Expressão dos mintermos = A'B'
