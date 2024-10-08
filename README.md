@@ -2,10 +2,8 @@
 
 A matéria de Arquitetura de Computadores é fundamental para compreender o funcionamento interno dos sistemas de computação, indo além da programação de alto nível e mergulhando nas camadas mais profundas da tecnologia. Durante o estudo dessa disciplina, aprendemos a usar a linguagem Verilog, uma ferramenta essencial para a modelagem e simulação de circuitos digitais.
 
-Verilog é uma linguagem de descrição de hardware que permite aos engenheiros e desenvolvedores criar e testar circuitos integrados em um ambiente de simulação antes da implementação física. Por meio dela, podemos descrever o comportamento e a estrutura dos circuitos de maneira eficiente, facilitando a verificação e a correção de erros antes da construção real dos dispositivos.
-
-Além de Verilog, a matéria aborda o uso das operações binárias e a compreensão de outras bases numéricas, como octal e hexadecimal. Essas operações são cruciais para o design e a análise de sistemas digitais, já que computadores operam com números binários. Conhecer como converter entre diferentes bases e realizar operações binárias é essencial para a manipulação e interpretação de dados em nível de hardware.
-
-A compreensão dos circuitos e das portas lógicas é outro aspecto central da Arquitetura de Computadores. As portas lógicas, como AND, OR, NOT e XOR, são os blocos básicos de construção dos circuitos digitais. Elas realizam operações lógicas que são fundamentais para a realização de tarefas computacionais. Ao estudar como essas portas interagem e como os circuitos são projetados para executar funções específicas, ganhamos uma visão mais clara sobre a implementação de algoritmos e operações em nível de hardware.
-
 Em resumo, a matéria de Arquitetura de Computadores nos proporciona um conhecimento profundo sobre como os componentes básicos dos computadores interagem e são organizados para realizar funções complexas. Através do uso do Verilog, da compreensão das operações em binário e outras bases, e do estudo das portas lógicas e circuitos, estamos preparados para abordar desafios na criação e otimização de sistemas computacionais, integrando teoria e prática para um entendimento mais completo da engenharia de hardware.
+
+NOTAS
+
+PROVA 1: 19/25
