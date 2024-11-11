@@ -6,4 +6,4 @@ Em resumo, a matéria de Arquitetura de Computadores nos proporciona um conhecim
 
 NOTAS
 
-PROVA 1: 19/25
+PROVA 1: 20/25
