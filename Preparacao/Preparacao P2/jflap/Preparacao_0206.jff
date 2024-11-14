@@ -1,108 +1,96 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 7.1.--><structure>&#13;
-	<type>mealy</type>&#13;
-	<automaton>&#13;
-		<!--The list of states.-->&#13;
-		<state id="0" name="q0">&#13;
-			<x>58.0</x>&#13;
-			<y>97.0</y>&#13;
-			<initial/>&#13;
-		</state>&#13;
-		<state id="1" name="q1">&#13;
-			<x>120.0</x>&#13;
-			<y>22.0</y>&#13;
-		</state>&#13;
-		<state id="2" name="q2">&#13;
-			<x>131.0</x>&#13;
-			<y>222.0</y>&#13;
-		</state>&#13;
-		<state id="3" name="q3">&#13;
-			<x>282.0</x>&#13;
-			<y>143.0</y>&#13;
-		</state>&#13;
-		<state id="4" name="q4">&#13;
-			<x>365.0</x>&#13;
-			<y>3.0</y>&#13;
-		</state>&#13;
-		<state id="5" name="q5">&#13;
-			<x>288.0</x>&#13;
-			<y>222.0</y>&#13;
-		</state>&#13;
-		<state id="6" name="q6">&#13;
-			<x>411.0</x>&#13;
-			<y>99.0</y>&#13;
-		</state>&#13;
-		<!--The list of transitions.-->&#13;
-		<transition>&#13;
-			<from>3</from>&#13;
-			<to>2</to>&#13;
-			<read>1</read>&#13;
-			<transout>0</transout>&#13;
-		</transition>&#13;
-		<transition>&#13;
-			<from>1</from>&#13;
-			<to>2</to>&#13;
-			<read>1</read>&#13;
-			<transout>0</transout>&#13;
-		</transition>&#13;
-		<transition>&#13;
-			<from>1</from>&#13;
-			<to>3</to>&#13;
-			<read>0</read>&#13;
-			<transout>0</transout>&#13;
-		</transition>&#13;
-		<transition>&#13;
-			<from>2</from>&#13;
-			<to>1</to>&#13;
-			<read>0</read>&#13;
-			<transout>0</transout>&#13;
-		</transition>&#13;
-		<transition>&#13;
-			<from>4</from>&#13;
-			<to>6</to>&#13;
-			<read>1</read>&#13;
-			<transout>1</transout>&#13;
-		</transition>&#13;
-		<transition>&#13;
-			<from>0</from>&#13;
-			<to>1</to>&#13;
-			<read>0</read>&#13;
-			<transout>0</transout>&#13;
-		</transition>&#13;
-		<transition>&#13;
-			<from>3</from>&#13;
-			<to>5</to>&#13;
-			<read>0</read>&#13;
-			<transout>1</transout>&#13;
-		</transition>&#13;
-		<transition>&#13;
-			<from>0</from>&#13;
-			<to>2</to>&#13;
-			<read>1</read>&#13;
-			<transout>0</transout>&#13;
-		</transition>&#13;
-		<transition>&#13;
-			<from>5</from>&#13;
-			<to>2</to>&#13;
-			<read>1</read>&#13;
-			<transout>0</transout>&#13;
-		</transition>&#13;
-		<transition>&#13;
-			<from>4</from>&#13;
-			<to>1</to>&#13;
-			<read>0</read>&#13;
-			<transout>0</transout>&#13;
-		</transition>&#13;
-		<transition>&#13;
-			<from>6</from>&#13;
-			<to>1</to>&#13;
-			<read>0</read>&#13;
-			<transout>0</transout>&#13;
-		</transition>&#13;
-		<transition>&#13;
-			<from>2</from>&#13;
-			<to>4</to>&#13;
-			<read>1</read>&#13;
-			<transout>0</transout>&#13;
-		</transition>&#13;
-	</automaton>&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 7.1.--><structure>
+	<type>mealy</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="q0">
+			<x>64.0</x>
+			<y>115.0</y>
+			<initial/>
+		</state>
+		<state id="1" name="q1">
+			<x>121.0</x>
+			<y>53.0</y>
+		</state>
+		<state id="2" name="q2">
+			<x>116.0</x>
+			<y>184.0</y>
+		</state>
+		<state id="3" name="q3">
+			<x>214.0</x>
+			<y>237.0</y>
+		</state>
+		<state id="4" name="q4">
+			<x>257.0</x>
+			<y>38.0</y>
+		</state>
+		<state id="5" name="q5">
+			<x>355.0</x>
+			<y>56.0</y>
+		</state>
+		<state id="6" name="q6">
+			<x>334.0</x>
+			<y>251.0</y>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>5</from>
+			<to>2</to>
+			<read>1</read>
+			<transout>0</transout>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>2</to>
+			<read>1</read>
+			<transout>0</transout>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>1</to>
+			<read>0</read>
+			<transout>0</transout>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>5</to>
+			<read>0</read>
+			<transout>1</transout>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>3</to>
+			<read>0</read>
+			<transout>0</transout>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>4</to>
+			<read>1</read>
+			<transout>0</transout>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>1</to>
+			<read>0</read>
+			<transout>0</transout>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>0</read>
+			<transout>0</transout>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>1</read>
+			<transout>0</transout>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>6</to>
+			<read>1</read>
+			<transout>1</transout>
+		</transition>
+	</automaton>
 </structure>

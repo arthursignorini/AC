@@ -2,28 +2,16 @@
 <project source="2.16.1.4.jar" version="1.0">
   This file is intended to be loaded by Logisim http://logisim.altervista.org
 
-  <lib desc="#Wiring" name="0"/>
+  <lib desc="#Wiring" name="0">
+    <tool name="Clock">
+      <a name="facing" val="south"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#TTL" name="2"/>
-  <lib desc="#Plexers" name="3">
-    <tool name="Multiplexer">
-      <a name="enable" val="false"/>
-    </tool>
-    <tool name="Demultiplexer">
-      <a name="enable" val="false"/>
-    </tool>
-    <tool name="Decoder">
-      <a name="enable" val="false"/>
-    </tool>
-  </lib>
+  <lib desc="#Plexers" name="3"/>
   <lib desc="#Arithmetic" name="4"/>
-  <lib desc="#Memory" name="5">
-    <tool name="ROM">
-      <a name="contents">addr/data: 8 8
-0
-</a>
-    </tool>
-  </lib>
+  <lib desc="#Memory" name="5"/>
   <lib desc="#I/O" name="6"/>
   <lib desc="#Base" name="7">
     <tool name="Text Tool">
@@ -73,41 +61,53 @@
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
-    <wire from="(160,70)" to="(160,90)"/>
-    <wire from="(120,70)" to="(160,70)"/>
-    <wire from="(160,90)" to="(180,90)"/>
-    <wire from="(120,110)" to="(180,110)"/>
-    <wire from="(230,100)" to="(230,120)"/>
-    <wire from="(230,120)" to="(250,120)"/>
-    <wire from="(120,150)" to="(230,150)"/>
-    <wire from="(230,140)" to="(230,150)"/>
-    <wire from="(230,140)" to="(250,140)"/>
-    <comp lib="0" loc="(120,150)" name="Pin">
+    <wire from="(280,140)" to="(280,160)"/>
+    <wire from="(230,160)" to="(280,160)"/>
+    <wire from="(280,100)" to="(280,120)"/>
+    <wire from="(230,100)" to="(280,100)"/>
+    <wire from="(50,90)" to="(180,90)"/>
+    <wire from="(50,60)" to="(50,90)"/>
+    <wire from="(100,100)" to="(180,100)"/>
+    <wire from="(100,60)" to="(100,100)"/>
+    <wire from="(150,110)" to="(200,110)"/>
+    <wire from="(150,60)" to="(150,110)"/>
+    <wire from="(50,150)" to="(200,150)"/>
+    <wire from="(50,90)" to="(50,150)"/>
+    <wire from="(150,170)" to="(200,170)"/>
+    <wire from="(150,170)" to="(150,250)"/>
+    <wire from="(150,110)" to="(150,170)"/>
+    <wire from="(50,150)" to="(50,250)"/>
+    <wire from="(100,160)" to="(200,160)"/>
+    <wire from="(100,160)" to="(100,250)"/>
+    <wire from="(100,100)" to="(100,160)"/>
+    <comp lib="0" loc="(100,60)" name="Pin">
+      <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
     </comp>
-    <comp lib="7" loc="(79,114)" name="Text">
-      <a name="text" val="b"/>
-    </comp>
-    <comp lib="0" loc="(120,110)" name="Pin">
+    <comp lib="0" loc="(150,60)" name="Pin">
+      <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
+      <a name="label" val="C"/>
     </comp>
-    <comp lib="7" loc="(79,149)" name="Text">
-      <a name="text" val="c"/>
-    </comp>
-    <comp lib="7" loc="(80,37)" name="Text">
-      <a name="text" val="TB"/>
-    </comp>
-    <comp lib="1" loc="(230,100)" name="XNOR Gate"/>
-    <comp lib="1" loc="(280,130)" name="AND Gate"/>
-    <comp lib="7" loc="(80,71)" name="Text">
-      <a name="text" val="a"/>
-    </comp>
-    <comp lib="0" loc="(280,130)" name="Pin">
+    <comp lib="0" loc="(310,130)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
+      <a name="label" val="OUT"/>
     </comp>
-    <comp lib="0" loc="(120,70)" name="Pin">
+    <comp lib="1" loc="(310,130)" name="OR Gate"/>
+    <comp lib="1" loc="(230,100)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(230,160)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(200,100)" name="NOT Gate"/>
+    <comp lib="0" loc="(50,60)" name="Pin">
+      <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
     </comp>
+    <comp lib="1" loc="(200,90)" name="NOT Gate"/>
   </circuit>
 </project>
