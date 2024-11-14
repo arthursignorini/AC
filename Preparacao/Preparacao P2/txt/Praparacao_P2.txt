@@ -54,6 +54,5 @@ d.) PoS (Ta) =  (A+B+C) . (A+B+C') . (A+B'+C) . (A'+B+C) . (A'+B'+C) . (A'+B'+C'
     Jb = a ∧ b ∧ c
     Kb = a' ∧ b ∧ c
 
-04.)
 
    
