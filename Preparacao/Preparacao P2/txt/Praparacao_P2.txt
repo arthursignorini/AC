@@ -12,33 +12,23 @@ Da | Ja | Ka | Ta          Db | Jb | Kb | Tb
  1 | 0  |  X |  0           1  | 0  |  X |  0
  1 | 0  |  X |  0           0  | 1  |  X |  1
 
-1)
+01.)
 
-a.) Da = A'B'C'D + AB'C'D' + AB'C'D' + AB'C'D'
-    Db = E'F'G'H + E'F'G'H + E'F'G'H + E'F'G'H      
+a.) SoP (Da) = (a'.b.c) + (a.b'.c') + (a.b.c') + (a.b.c)  | a.) SoP (Db) = (a'.b'.c) + (a'.b.c') + (a'.b.c) + (a.b.c')     
+b.) SoP (Ja) =                                            | b.) SoP (Jb) = 
+c.) SoP (Ka) =                                            | c.) SoP (Kb) = 
+d.) SoP (Ta) = (a'.b.c) + (a.b'.c)                        | d.) SoP (Tb) = (a'.b'.c) + (a.b.c) 
 
-b.) Ja = A'B'C'D + A'B'C'D
-    Ka = A'B'C'D + A'B'C'D
-    Jb = E'F'G'H + E'F'G'H
-    Kb = E'F'G'H
 
-c.) Ta = A'B'C'D + A'B'C'D
-    Tb = E'F'G'H + E'F'G'H
+02.) [Texto] Montar as expressões compactas por MAXTERMOS dos flip-flops
 
-2)
+a.) PoS (Da) = (A+B+C) . (A+B+C') . (A+B'+C) . (A'+B+C')                           | a.) PoS (Db) = (A+B+C) . (A'+B+C) . (A'+B+C') . (A'+B'+C')
+b.) PoS (Ja) =                                                                     | b.) PoS (Jb) =
+c.) PoS (Ka) =                                                                     | c.) PoS (Kb) = 
+d.) PoS (Ta) =  (A+B+C) . (A+B+C') . (A+B'+C) . (A'+B+C) . (A'+B'+C) . (A'+B'+C')  | d.) PoS (Tb) = (A+B+C) . (A+B'+C) . (A+B'+C') . (A'+B+C) . (A'+B+C') . (A'+B'+C)
 
-a.) Da = (A + B + C + D)
-    Db = (E + F + G + H)
 
-b.) Ja = (A + B + C + D)
-    Ka = (A + B + C + D)
-    Jb = (E + F + G + H)
-    Kb = (E + F + G + H)
-
-c.) Ta = (A + B + C + D)
-    Tb = (E + F + G + H)
-
-3)
+03.)
 
     Sa              Ra              Sb               Rb
     ab\c 0 1        ab\c 0 1        ab\c 0 1         ab\c 0 1
@@ -47,16 +37,23 @@ c.) Ta = (A + B + C + D)
     11   0 0        11   X X        11   0 1         11   X 0
     10   0 1        10   X 0        10   X X         10   0 0
 
-    Da                      Jb              Kb
-    ab\c 0 1                ab\c 0 1        ab\c 0 1 
-    00   0 0                00   X X        00   0 1
-    01   0 1                01   0 0        01   X X
-    11   1 1                11   0 1        11   X X
-    10   1 0                10   X X        10   0 0
+    Ta              Da              Jb              Kb
+    ab\c 0 1        ab\c 0 1        ab\c 0 1        ab\c 0 1 
+    00   0 0        00   0 0        00   X X        00   0 1
+    01   0 1        01   0 1        01   0 0        01   X X
+    11   0 0        11   1 1        11   0 1        11   X X
+    10   0 1        10   1          10   X X        10   0 0
 
-    Ta
-    ab\c 0 1
-    00   0 0
-    01   0 1
-    11   0 0
-    10   0 1
+    SIMPLIFICAÇÕES
+    Sa = a' ∧ b ∧ c
+    Ra = a' ∧ b ∧ c'
+    Sb = a ∧ b ∧ c
+    Rb = a' ∧ b ∧ c + a ∧ b ∧ c'
+    Ta = a' ∧ b ∧ c + a ∧ b ∧ c
+    Da = a' ∧ b
+    Jb = a ∧ b ∧ c
+    Kb = a' ∧ b ∧ c
+
+04.)
+
+   
