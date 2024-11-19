@@ -1,0 +1,35 @@
+// Arthur Signorini Miranda
+// 848122
+
+// Resto da divisão entre dois números inteiros de 8 bits (IMOD)
+JMP MAIN // desvia para a área principal
+
+// Função IMOD
+F_IMOD:
+    MVI D,00   // D = 0 (resto)
+    MOV A, C   // A = dado1 (dividendo)
+    MOV B, M   // B = dado2 (divisor)
+    
+IMOD_LOOP:
+    SUB B      // A = A - B
+    JZ IMOD_DONE
+    MOV A, D   // Atualiza D
+    CALL F_IMOD
+
+IMOD_DONE:
+    MOV D, A   // D = resto
+    RET
+
+MAIN:
+    LXI H, 0050h
+    MOV A, M  // Dado1 = MEM[0050]
+    INX H
+    MOV C, M  // Dado2 = MEM[0051]
+    CALL F_IMOD // Chama a função IMOD
+    STA 0052  // Armazena o resultado (resto) em MEM[0052]
+    HLT
+END
+// Área de dados
+dado1: 15h  ; dividendo
+dado2: 04h  ; divisor
+dado3: 00h  ; resultado (resto)

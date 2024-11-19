@@ -1,0 +1,33 @@
+// Arthur Signorini Miranda
+// 848122
+
+// Calcular o fatorial de um número de 8 bits
+JMP MAIN // desvia para a área principal
+
+// Função FAT (Fatorial)
+F_FAT:
+    MVI D, 01  // D = 1 (inicializa o acumulador do fatorial)
+    MOV B, C   // B = dado1 (número para calcular o fatorial)
+    
+FAT_LOOP:
+    MOV A, B   // A = B (número atual)
+    CALL F_MULT // Chama a função de multiplicação
+    MOV D, A   // Atualiza o fatorial acumulado (D)
+    DEC B      // Decrementa o número
+    JNZ FAT_LOOP // Se B != 0, repete o loop
+    
+    RET
+
+// Função F_MULT - Multiplicação de dois números de 8 bits
+F_MULT:
+    MVI H, 00  // H = 0 (parte alta do resultado)
+    MVI L, 00  // L = 0 (parte baixa do resultado)
+    MOV A, D   // A = fatorial acumulado (D)
+    MOV B, A   // B = dado1 (fatorial acumulado)
+    MOV A, C   // A = dado2 (número atual)
+    
+MULT_LOOP:
+    ADD L      // L = L + A
+    MOV L, A   // Armazena o resultado de volta em L
+    MOV A, B   // Recupera o valor de B
+    MOV C, A   // Alguém de controle final

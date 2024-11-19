@@ -1,0 +1,60 @@
+// Arthur Signorini Miranda
+// 848122
+
+// Converter um valor BCD para o hexadecimal equivalente
+JMP MAIN // desvia para a área principal
+
+// Função BCD_TO_HEX
+F_BCD_TO_HEX:
+    MOV A, M   // A = dado1 (BCD)
+    MOV B, A   // B = dado1 (BCD)
+    MVI C, 0Ah // C = 10 (usado para multiplicação por 10)
+
+    // Extraindo o nibble mais significativo (dígito alto)
+    ANI 0F0h   // A = A & F0h (mantém o nibble alto)
+    MOV D, A   // D = nibble alto
+
+    // Extraindo o nibble menos significativo (dígito baixo)
+    MOV A, B   // A = dado1 (BCD)
+    ANI 0Fh    // A = A & 0Fh (mantém o nibble baixo)
+    MOV E, A   // E = nibble baixo
+
+    // Multiplicação do dígito alto (D) por 10 (C)
+    MVI H, 00  // H = 0 (parte alta do produto)
+    MVI L, 00  // L = 0 (parte baixa do produto)
+    MOV A, D   // A = dígito alto
+    CALL F_MUL // Chama a função de multiplicação
+
+    // Adiciona o dígito baixo (E) ao produto
+    MOV A, L   // A = parte baixa do produto
+    ADD E      // A = A + E (adiciona o dígito baixo)
+    MOV L, A   // L = parte baixa do resultado
+    MOV A, H   // A = parte alta do resultado
+    MOV H, A   // Atualiza o valor da parte alta
+
+    RET
+
+// Função de multiplicação (multiplica A * B, resultado em HL)
+F_MUL:
+    MVI D, 00  // D = 0 (multiplicação)
+    MOV B, A   // B = A
+MUL_LOOP:
+    ADD B      // A = A + B
+    MOV D, A   // D = A
+    MOV A, B   // A = B
+    CALL F_ADD // Chama função de soma
+    JNZ MUL_LOOP
+    RET
+
+MAIN:
+    LXI H, 0050h // Carrega o endereço de dado1
+    MOV A, M     // A = dado1 (BCD)
+    CALL F_BCD_TO_HEX // Chama a função de conversão
+    STA 0052     // Armazena o resultado em dado3 (hex)
+    HLT          // Finaliza a execução
+
+END
+// Área de dados
+dado1: 24h  // Exemplo de número BCD (24 BCD = 18 hexadecimal)
+dado2: 00h  // Não utilizado
+dado3: 00h  // Resultado hexadecimal

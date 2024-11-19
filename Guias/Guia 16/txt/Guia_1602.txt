@@ -1,0 +1,36 @@
+// Arthur Signorini Miranda
+// 848122
+
+// Calcular o quociente inteiro (IDIV) entre dois números de 8 bits
+JMP MAIN // desvia para a área principal
+
+// Função IDIV (Divisão por subtração sucessiva)
+F_IDIV:
+    MVI D, 00    // D = 0 (quociente)
+    MOV B, C     // B = divisor (dado2)
+    MOV A, M     // A = dividendo (dado1)
+    
+IDIV_LOOP:
+    CMP B        // Compara A (dividendo) com B (divisor)
+    JC DIV_DONE  // Se A < B (menor que o divisor), finaliza
+    SUB B        // A = A - B (subtrai divisor do dividendo)
+    INX D        // D = D + 1 (incrementa o quociente)
+    JMP IDIV_LOOP // Repete o loop
+    
+DIV_DONE:
+    MOV M, D     // Armazena o quociente em dado3
+    RET          // Retorna da função
+
+MAIN:
+    LXI H, 0050h // Carrega o endereço de dado1
+    MOV A, M     // A = dado1
+    INX H        // Avança o ponteiro para dado2
+    MOV C, M     // C = dado2 (divisor)
+    CALL F_IDIV  // Chama a função F_IDIV
+    HLT          // Finaliza a execução
+
+END
+// Área de dados
+dado1: 0Ah  // Dividendo (10 em decimal)
+dado2: 02h  // Divisor (2 em decimal)
+dado3: 00h  // Quociente

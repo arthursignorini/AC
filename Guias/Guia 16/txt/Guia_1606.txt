@@ -1,0 +1,32 @@
+// Arthur Signorini Miranda
+// 848122
+
+// Calcular o quadrado de um número de 8 bits
+JMP MAIN // desvia para a área principal
+
+// Função SQR
+F_SQR:
+    MVI D, 00  // D = 0 (inicializa o quadrado)
+    MOV B, C   // B = dado1 (número a ser elevado ao quadrado)
+    MOV A, B   // A = dado1 (número a ser elevado ao quadrado)
+
+SQR_LOOP:
+    ADD D      // D = D + A
+    MOV D, A   // Atualiza o valor de D
+    MOV A, B   // A = B (recupera o número original)
+    DEC A      // Decrementa o número
+    JNZ SQR_LOOP // Repete o loop enquanto A != 0
+
+    STA 0052   // Armazena o resultado (quadrado) em dado3
+    RET        // Retorna da função
+
+MAIN:
+    LXI H, 0050h // Carrega o endereço de dado1
+    MOV A, M     // A = dado1
+    CALL F_SQR   // Chama a função F_SQR para calcular o quadrado
+    HLT          // Finaliza a execução
+
+END
+// Área de dados
+dado1: 05h  // Número a ser elevado ao quadrado (5 em decimal)
+dado3: 00h  // Resultado do quadrado (25 em decimal = 19h)

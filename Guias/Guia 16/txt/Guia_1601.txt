@@ -1,0 +1,35 @@
+// Arthur Signorini Miranda
+// 848122
+
+// Multiplicação de dois números de 8 bits (IMUL)
+JMP MAIN // desvia para a área principal
+
+// Função IMUL
+F_IMUL:
+    MVI D,00   // D = 0 (resultado mais significativo)
+    MVI E,00   // E = 0 (resultado menos significativo)
+    
+    MOV B, C   // B = dado1
+    MOV A, B   // A = dado1
+    
+    MOV B, C   // B = dado2
+    MOV C, B   // C = dado2
+    
+    // Loop de soma sucessiva
+    MVI A,00   // A = 0 (inicializa o resultado)
+    MOV D, A
+    MOV E, A
+
+IMUL_LOOP:
+    MOV A, B   // A = dado1
+    ADD A, D   // A = A + dado1
+    MOV D, A   // D = A
+    MOV A, E   // A = E
+    MOV B, A
+    CALL F_ADD // chame a função F_ADD
+
+    RET
+// área de dados
+    dado1: 10
+    dado2: 02
+    dado3: 00

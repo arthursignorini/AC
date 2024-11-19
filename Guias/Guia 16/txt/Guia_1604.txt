@@ -1,0 +1,37 @@
+// Arthur Signorini Miranda
+// 848122
+
+// Encontrar o maior valor de um arranjo de 8 bits
+JMP MAIN // desvia para a área principal
+
+// Função MAIOR
+F_MAIOR:
+    MVI D,00  // D = maior valor encontrado
+    MOV A, M  // A = MEM[HL]
+    MOV D, A  // D = A (inicializa maior valor)
+    
+LOOP_MAIOR:
+    INX H     // HL aponta para o próximo valor do arranjo
+    MOV A, M  // A = MEM[HL]
+    CMP D     // compara A com D
+    JC PROXIMO
+    MOV D, A  // se A for maior, atualiza D
+PROXIMO:
+    INX H
+    MOV A, M
+    JZ FIM_LOOP
+    JMP LOOP_MAIOR
+
+FIM_LOOP:
+    STA 0052  // Armazena o maior valor encontrado em dado3
+    RET
+
+MAIN:
+    LXI H, 0050h // Arranjo começa em 0050h
+    CALL F_MAIOR // Chama a função F_MAIOR
+    HLT
+END
+// Área de dados
+arranjo:
+    DB 05h, 02h, 0Fh, 08h, 03h // exemplo de arranjo
+dado3: 00h // maior valor encontrado
