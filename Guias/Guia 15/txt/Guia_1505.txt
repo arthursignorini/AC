@@ -1,0 +1,24 @@
+
+// Guia_1505.txt
+// Nome: Arthur Signorini Miranda
+// Matrícula: 848122
+
+
+// Calcular dado03 = dado01 * 8 + dado02 / 2
+
+        LXI  H, dado01 ; HL <- addr(dado01)
+        MOV  A, M      ; A <- MEM[dado01]
+        ADD  A         ; A <- A * 2
+        ADD  A         ; A <- A * 4
+        ADD  A         ; A <- A * 8
+        INX  H         ; HL <- addr(dado02)
+        MOV  B, M      ; B <- MEM[dado02]
+        RRC            ; Dividir B por 2
+        ADD  B         ; A <- A + B
+        STA  dado03    ; MEM[dado03] <- A
+        HLT            ; parar
+
+; Área de dados
+dado01: DB 03h ; primeiro dado
+dado02: DB 04h ; segundo dado
+dado03: DB 00h ; resultado

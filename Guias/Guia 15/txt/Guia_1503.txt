@@ -1,0 +1,28 @@
+
+// Guia_1503.txt
+// Nome: Arthur Signorini Miranda
+// Matrícula: 848122
+
+
+// Calcular dado05 = dado01 - dado02 + dado03 - dado04 (dados BCD)
+
+        LXI  H, dado01 ; HL <- addr(dado01)
+        MOV  A, M      ; A <- MEM[dado01]
+        INX  H         ; HL <- addr(dado02)
+        SUB  M         ; A <- A - MEM[dado02]
+        DAA            ; Ajustar BCD
+        INX  H         ; HL <- addr(dado03)
+        ADD  M         ; A <- A + MEM[dado03]
+        DAA            ; Ajustar BCD
+        INX  H         ; HL <- addr(dado04)
+        SUB  M         ; A <- A - MEM[dado04]
+        DAA            ; Ajustar BCD
+        STA  dado05    ; MEM[dado05] <- A
+        HLT            ; parar
+
+; Área de dados
+dado01: DB 12h ; primeiro dado (BCD)
+dado02: DB 05h ; segundo dado (BCD)
+dado03: DB 07h ; terceiro dado (BCD)
+dado04: DB 03h ; quarto dado (BCD)
+dado05: DB 00h ; resultado (BCD)

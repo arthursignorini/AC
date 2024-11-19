@@ -1,0 +1,25 @@
+
+// Guia_1502.txt
+// Nome: Arthur Signorini Miranda
+// Matrícula: 848122
+
+
+// Calcular dado05 = dado01 + dado02 + dado03 - dado04
+
+        LXI  H, dado01 ; HL <- addr(dado01)
+        MOV  A, M      ; A <- MEM[dado01]
+        INX  H         ; HL <- addr(dado02)
+        ADD  M         ; A <- A + MEM[dado02]
+        INX  H         ; HL <- addr(dado03)
+        ADD  M         ; A <- A + MEM[dado03]
+        INX  H         ; HL <- addr(dado04)
+        SUB  M         ; A <- A - MEM[dado04]
+        STA  dado05    ; MEM[dado05] <- A
+        HLT            ; parar
+
+; Área de dados
+dado01: DB 0002h ; primeiro dado (16 bits)
+dado02: DB 0003h ; segundo dado (16 bits)
+dado03: DB 0004h ; terceiro dado (16 bits)
+dado04: DB 0001h ; quarto dado (16 bits)
+dado05: DB 0000h ; resultado
