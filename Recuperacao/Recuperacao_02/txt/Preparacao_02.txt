@@ -16,10 +16,26 @@ D 1 1 0 1   1 1 1   1  1  1     0  0  1
 E 1 1 1 0   1 1 1   1  1  1     0  0  0
 F 1 1 1 1   0 0 0   0  0  0     1  1  1
 
-1.a)
+a.) 
 
-ab \ cd 00 01 11 10 
-00      
-01            1
-11         1     1
-10         1  1  1
+F(ABCD)=	A C' D	+	A C D'	+	A B' C	+	A' B C D
+
+b.) 
+
+F = (C+D)(B+D)(B+C)(B'+C'+D')
+
+c.) 
+
+F(ABCD)=	C' D	+	C D'	+	A' D	+	B' D
+
+d.) 
+
+F(ABCD)=	B C D	+	A C' D'
+
+e.) 
+
+F = (D)(B+C')(A+C')
+
+f.) 
+
+F(ABCD)=	C' D	+	A B D
