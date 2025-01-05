@@ -9,6 +9,10 @@ NOTAS
 
 | Prova   | Nota    | 
 |---------|---------|
-| Prova 1 | 20,0    | 
-| Prova 2 | 21,0    |
+| Prova 1 | 24,0    | 
+| Prova 2 | 24,0    |
+| Prova 3 | 16,0    |
+| Guias   | 20,0    |
+| ADA     | 4,4     |
 
+Totalizando 89
