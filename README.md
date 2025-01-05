@@ -15,4 +15,4 @@ NOTAS
 | Guias   | 20,0    |
 | ADA     | 4,4     |
 
-Totalizando 89
+Totalizando 89,0
