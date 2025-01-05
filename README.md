@@ -1,4 +1,4 @@
-# ARQUITETURA DE COMPUTADORES 1
+# ARQUITETURA DE COMPUTADORES 1 👨‍💻
 
 A matéria de Arquitetura de Computadores é fundamental para compreender o funcionamento interno dos sistemas de computação, indo além da programação de alto nível e mergulhando nas camadas mais profundas da tecnologia.
 
