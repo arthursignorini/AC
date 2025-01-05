@@ -4,7 +4,7 @@ A matéria de Arquitetura de Computadores é fundamental para compreender o func
 
 Em resumo, a matéria de Arquitetura de Computadores nos proporciona um conhecimento profundo sobre como os componentes básicos dos computadores interagem e são organizados para realizar funções complexas. Através do uso do Verilog, da compreensão das operações em binário e outras bases, e do estudo das portas lógicas e circuitos, estamos preparados para abordar desafios na criação e otimização de sistemas computacionais, integrando teoria e prática para um entendimento mais completo da engenharia de hardware.
 
-NOTAS
+# 📊 NOTAS
 
 
 | Prova   | Nota    | 
